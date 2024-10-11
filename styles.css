@@ -1,0 +1,257 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Header Section */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2b002e;
+    padding: 20px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    width: 100%;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+}
+
+.iet-logo, .ankuran-logo {
+    height: 50px;
+    margin-right: 15px;
+}
+
+.ankuran-logo {
+    height: 45px;
+}
+
+/* Navbar Styles */
+.navbar{
+    background-color: #3b0c3e;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    position: sticky;
+    top: 90px;
+    z-index: 100;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #e84993;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+}
+
+/* About Us Section */
+.about-us {
+    padding: 50px;
+    text-align: center;
+    background-color: #2e2e2e;
+}
+
+/* Events Section */
+.events {
+    padding: 50px;
+    text-align: center;
+    background-color: #1a1a1a;
+}
+
+.event-slider {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.slide {
+    background-color: #e84993;
+    padding: 20px;
+    color: #ffffff;
+    width: 200px;
+    border-radius: 10px;
+}
+
+/* Past Events Section */
+@keyframes slider{
+    0%{ left: 0;}
+    10%{ left: 0;}
+    20%{left: -50%;}
+    30%{left: -50%;}
+    40%{ left: -100%;}
+    50%{ left: -100%;}
+    60%{ left: -150%;}
+    70%{ left: -150%;}
+    80%{ left: -200%;}
+    90%{ left: -200%;}
+    100%{ left: -250%;}
+}
+
+
+.past-events {
+    padding: 30px 50px 50px 50px;
+    text-align: center;
+    background-color: #2e2e2e;
+    overflow: hidden;
+}
+
+.event-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation : 25s slider  infinite;
+}
+
+
+.event-gallery img {
+    float: left;
+    width: 390px;
+    height: 340px;
+    border-radius: 10px;
+    box-shadow: 8px 8px #2b002e;
+}
+
+
+
+/* Sponsors Section */
+.sponsors {
+    padding: 50px 20px;
+    background-color: #2b002e;
+    text-align: center;
+}
+
+.sponsors h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #e84993;
+}
+
+.sponsors-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.sponsor-card {
+    background-color: #2e2e2e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sponsor-card img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* Footer Section */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #2b002e;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 100%;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Desktop-specific */
+@media (min-width: 769px) {
+    .hamburger {
+        display: none;
+    }
+}
