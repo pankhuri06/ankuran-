@@ -470,7 +470,7 @@ footer {
     .event-gallery {
         display: flex;
         justify-content: center;
-        gap: 60px;
+        gap: 80px;
         position: relative;
         width: 400%;
         margin: 0;
