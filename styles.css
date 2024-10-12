@@ -488,27 +488,27 @@ footer {
 @media (max-width: 340px){
     @keyframes slider{
         0%{ left: 0;}
-        10%{ left: 0;}
-        20%{left: -40%;}
-        30%{left: -40%;}
-        40%{ left: -200%;}
-        50%{ left: -200%;}
-        60%{ left: -290%;}
-        70%{ left: -290%;}
-        80%{ left: -382%;}
-        90%{ left: -382%;}
-        100%{ left: -474%;}
+        5%{ left: 0;}
+        20%{left: -65%;}
+        28%{left: -65%;}
+        40%{ left: -153%;}
+        47%{ left: -153%;}
+        60%{ left: -230%;}
+        67%{ left: -230%;}
+        80%{ left: -316%;}
+        87%{ left: -316%;}
+        100%{ left: -396%;}
     }
 
     .event-gallery {
         display: flex;
         justify-content: center;
-        gap: 90px;
+        gap: 60px;
         position: relative;
         width: 400%;
         margin: 0;
         left: 0;
-        animation : 27s slider  infinite;
+        animation : 14s slider  infinite;
     }
 
     .event-gallery img {
@@ -519,7 +519,6 @@ footer {
         box-shadow: 6px 6px #2b002e;
     }
 }
-
 /* Desktop-specific */
 @media (min-width: 769px) {
     .hamburger {
