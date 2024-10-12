@@ -131,6 +131,57 @@ nav ul li a:hover {
     border-radius: 10px;
 }
 
+/* Slider Section */
+.slider {
+    position: relative;
+    max-width: 70%; /* Reduced width for a more balanced look */
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    height: 250px; /* Adjusted height for a more compact slider */
+    object-fit: cover; /* Image will cover the entire box */
+    object-position: center; /* Center the image within the box */
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+
 /* Past Events Section */
 @keyframes slider{
     0%{ left: 0;}
