@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events - Ankuran 2024</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Include your navbar here -->
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="past-events.html">Past Events</a></li>
+                    <!-- <li><a href="#">Gallery</a></li> -->
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="sponsors.html">Sponsors</a></li>
+                </ul> 
+                 <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            </nav>
+        </div>   
+    </header>
+
+    <section class="slider">
+        <div class="slides">
+            <!-- Slide 1 -->
+            <div class="slide">
+                <img src="event-photos/ANKURAN’24 (2).png" alt="Event 1">
+            </div>
+            <!-- Slide 2 -->
+            <div class="slide">
+                <img src="event-photos/ANKURAN’24.png" alt="Event 2">
+            </div>
+            <!-- Slide 3 -->
+            <div class="slide">
+                <img src="event-photos/Screenshot 2024-10-12 at 12.05.04 PM.png" alt="Event 3">
+            </div>
+        </div>
+        <!-- Navigation Arrows -->
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+    
+    
+
+    <footer>
+        <!-- Footer content -->  <p>© 2024 Ankuran, IET Lucknow. All rights reserved.</p>
+    </footer>
+    <script>
+        let currentSlide = 0;
+
+function moveSlide(step) {
+    const slides = document.querySelector('.slides');
+    const totalSlides = document.querySelectorAll('.slide').length;
+
+    currentSlide = (currentSlide + step + totalSlides) % totalSlides;
+    slides.style.transform = translateX(${-currentSlide * 100}%);
+}
+
+    </script>
+</body>
+</html>
