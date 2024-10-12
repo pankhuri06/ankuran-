@@ -3,20 +3,21 @@ function toggleMenu() {
     nav.classList.toggle('active');
 }
 
-// You can add JavaScript for your image sliders here later
-// var firstIndex=0;
-// function automaticSlide(){
-//     setTimeout(automaticSlide, 2000);
-//     var pics;
-//     const img= document.querySelectorAll(".img");
-//     for(pics=0 ; pics<img.length; pics++){
-//         img[pics].style.display= "none";
-//     }
-//     firstIndex++;
-//     if(firstIndex> img.length){
-//         firstIndex=1;
-//     }
-//     img[firstIndex -1].style.display= "block";
-// }
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent the form from submitting normally
 
-// automaticSlide();
+    // Simple validation for empty fields
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const message = document.getElementById('message').value;
+
+    if (name === "" || email === "" || message === "") {
+        alert("Please fill in all the fields.");
+    } else {
+        alert("Thank you for your message! We'll get back to you soon.");
+        // Clear the form
+        document.getElementById('contactForm').reset();
+    }
+});
+
+// You can add JavaScript for your image sliders here later
