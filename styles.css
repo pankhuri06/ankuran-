@@ -284,19 +284,19 @@ footer {
     }
 }
 
-@media (max-width: 400px){
+@media (max-width: 340px){
     @keyframes slider{
         0%{ left: 0;}
         10%{ left: 0;}
-        20%{left: -116%;}
-        30%{left: -116%;}
+        20%{left: -110%;}
+        30%{left: -110%;}
         40%{ left: -200%;}
         50%{ left: -200%;}
-        60%{ left: -285%;}
-        70%{ left: -285%;}
-        80%{ left: -370%;}
-        90%{ left: -370%;}
-        100%{ left: -460%;}
+        60%{ left: -290%;}
+        70%{ left: -290%;}
+        80%{ left: -382%;}
+        90%{ left: -382%;}
+        100%{ left: -474%;}
     }
 
     .event-gallery {
