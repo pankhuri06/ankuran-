@@ -452,7 +452,7 @@ footer {
 /* responsive slider */
 
 
-@media (min-width: 370px){
+@media (max-width: 768px){
     @keyframes slider{
         0%{ left: 0;}
         5%{ left: 0;}
@@ -486,6 +486,7 @@ footer {
         box-shadow: 6px 6px #2b002e;
     }
 }
+
 /* Desktop-specific */
 @media (min-width: 769px) {
     .hamburger {
