@@ -452,7 +452,7 @@ footer {
 /* responsive slider */
 
 
-@media (max-width: 370px){
+@media (min-width: 370px){
     @keyframes slider{
         0%{ left: 0;}
         5%{ left: 0;}
