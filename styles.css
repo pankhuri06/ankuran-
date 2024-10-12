@@ -181,6 +181,7 @@ nav ul li a:hover {
 
 .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
+}
 
 /* Past Events Section */
 @keyframes slider{
