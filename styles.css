@@ -183,6 +183,58 @@ nav ul li a:hover {
     background-color: rgba(0,0,0,0.8);
 }
 
+/* Sponsors Section */
+.sponsors-section {
+    padding: 40px;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+.sponsors-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #5e17eb; /* Deep purple */
+}
+
+.sponsors-section p {
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* Sponsor Grid Layout */
+.sponsors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.sponsor {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.sponsor img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.sponsor:hover {
+    transform: scale(1.05);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .sponsors-section h1 {
+        font-size: 2rem;
+    }
+}
+
 /* Past Events Section */
 @keyframes slider{
     0%{ left: 0;}
