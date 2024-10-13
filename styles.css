@@ -36,6 +36,24 @@ header {
     height: 45px;
 }
 
+.social-media {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    margin-left: 35rem;
+  }
+
+  .insta-ankuran{
+  padding: 10px 80rem;
+  }
+
+  .insta-logo {
+    width: 50px;
+    height: 40px;
+    cursor: pointer;
+    margin-right: 24px;
+  }
+
 /* Navbar Styles */
 .navbar{
     background-color: #3b0c3e;
@@ -450,6 +468,14 @@ footer {
 
 /* Responsive Navbar */
 @media (max-width: 768px) {
+   .insta-ankuran{
+        padding: 10px 12rem;
+        /* height: 50px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end; */
+        }
+    
     nav ul {
         display: none;
         flex-direction: column;
