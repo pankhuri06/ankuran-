@@ -207,24 +207,47 @@ nav ul li a:hover {
 }
 
 /* Events Section */
+
+
 .events {
     padding: 50px;
     text-align: center;
     background-color: #1a1a1a;
 }
 
-.event-slider {
+.event-grid {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
 
-.slide {
-    background-color: #e84993;
+.event-card {
+    background-color: #2e2e2e;
     padding: 20px;
-    color: #ffffff;
-    width: 200px;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+.event-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.register-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #5e17eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.register-btn:hover {
+    background-color: #4a13c8;
 }
 
 /* Slider Section */
