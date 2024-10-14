@@ -5,6 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Ankuran 2024</title>
     <link rel="stylesheet" href="styles.css">
+
+    <style>
+        section{
+            /* background-image: url("about bg.png"); */
+            height: 40rem;
+            display: grid;
+            position: relative;
+            background-color: red;
+        }
+        
+        section::before{
+            background-image: url("about bg.png");
+            background-size: cover;
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: 0.6;
+        }
+
+        @media(max-width:768px){
+            .about-us {
+                height: 59rem;
+            }
+
+           footer p{
+                color: black;
+            }
+        }
+
+        .about-us h1,h2,h4{
+            color: white;
+            text-shadow: 50%;
+            isolation: isolate;
+        }
+
+        footer p{
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,7 +52,7 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html"  class="active">About Us</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
                     <li><a href="events.html">Events</a></li>
                     <li><a href="past-events.html">Past Events</a></li>
                     <li><a href="contact.html">Contact</a></li>
@@ -23,25 +62,27 @@
             </nav>
         </div>
     </header>
-
-    <section class="about-us">
-            <h1>About Us – ANKURAN: A Celebration of Innovation and Culture</h1>
-            <p>Welcome to ANKURAN, the annual technical and cultural fest organized by the Department of Electronics and Communication Engineering at IET Lucknow. True to its name, which signifies "germination" or "new beginnings," ANKURAN embodies the spirit of growth, creativity, and learning...</p>
+    
+        <section class="about-us">
+                <h1>About Us – ANKURAN: A Celebration of Innovation and Culture</h1>
+                <h4>Welcome to ANKURAN, the annual technical and cultural fest organized by the Department of Electronics and Communication Engineering at IET Lucknow. True to its name, which signifies "germination" or "new beginnings," ANKURAN embodies the spirit of growth, creativity, and learning...</h4>
+                
+                <h2>Mission and Values</h2>
+                <h4>ANKURAN's mission is to inspire young minds to think beyond textbooks and explore the practical, hands-on side of engineering while promoting teamwork and collaboration...</h4>
             
-            <h2>Mission and Values</h2>
-            <p>ANKURAN's mission is to inspire young minds to think beyond textbooks and explore the practical, hands-on side of engineering while promoting teamwork and collaboration...</p>
-        
-            <h2>History and Achievements</h2>
-            <p>Over the years, ANKURAN has grown to become one of the most eagerly awaited events on the IET Lucknow calendar...</p>
-        
-            <h2>Why ANKURAN?</h2>
-            <p>What sets ANKURAN apart is its unique blend of technical excellence and cultural diversity...</p>
-        
-            <p>Join us this year at ANKURAN, and be a part of this exciting journey of innovation, creativity, and celebration! Follow us on Instagram at <a href="https://www.instagram.com/ankuran_2022" target="_blank">@ankuran_2022</a> to stay updated with the latest news and event details.</p>
+                <h2>History and Achievements</h2>
+                <h4>Over the years, ANKURAN has grown to become one of the most eagerly awaited events on the IET Lucknow calendar...</h4>
+            
+                <h2>Why ANKURAN?</h2>
+                <h4>What sets ANKURAN apart is its unique blend of technical excellence and cultural diversity...</h4>
+            
+                <h4>Join us this year at ANKURAN, and be a part of this exciting journey of innovation, creativity, and celebration! Follow us on Instagram at <a href="https://www.instagram.com/ankuran_2022" target="_blank">@ankuran_2022</a> to stay updated with the latest news and event details.</h4>
         </section>
-
+        
+    
     <footer>
         <p>© 2024 Ankuran, IET Lucknow. All rights reserved.</p>
+        <p>Follow us on <a href="https://www.instagram.com/ankuran_2022" target="_blank">Instagram</a></p>
     </footer>
     <script src="script.js"></script>
 </body>
