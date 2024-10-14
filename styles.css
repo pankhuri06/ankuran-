@@ -406,7 +406,7 @@ nav ul li a:hover {
     justify-content: center;
     gap: 300px;
     position: relative;
-    width: 400%;
+/*     width: 400%; */
     margin: 0;
     left: 0;
     animation : 25s slider  infinite;
@@ -534,7 +534,7 @@ footer {
         justify-content: center;
         gap: 80px;
         position: relative;
-        width: 400%;
+/*         width: 400%; */
         margin: 0;
         left: 0;
         animation : 14s slider  infinite;
