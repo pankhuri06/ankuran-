@@ -51,8 +51,8 @@ header {
   }
 
   .insta-logo {
-    width: 50px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     margin-right: 24px;
   }
@@ -471,14 +471,15 @@ footer {
 }
 
 /* Responsive Navbar */
-@media (max-width: 768px) {
-   .insta-ankuran{
-        padding: 10px 12rem;
-        }
 
-  .insta-logo{
-        width:40px;
-        height: 35px;
+@media (max-width: 768px) {
+    .insta-ankuran{
+       padding: 10px 17rem;
+    }
+
+    .insta-logo{
+        width:30px;
+        height: 30px;
     }
     
     nav ul {
