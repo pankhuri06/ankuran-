@@ -473,6 +473,11 @@ footer {
 /* Responsive Navbar */
 
 @media (max-width: 768px) {
+
+    body{
+       overflow-x: hidden;
+    }
+    
     .insta-ankuran{
        padding: 10px 17rem;
     }
