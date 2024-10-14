@@ -4,9 +4,12 @@ body {
     font-family: Arial, sans-serif;
     background-color: #1a1a1a;
     color: #ffffff;
-    /* width: fit-content; */
-    /* block-size: fit-content; */
-
+    overflow-x: hidden;
+    background-size: cover;
+    background-attachment: fixed;
+    background-size: contain;
+    height: 100%;
+    background-position: center;
 }
 
 /* Header Section */
