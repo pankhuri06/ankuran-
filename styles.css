@@ -556,7 +556,7 @@ footer {
 @media (max-width: 768px){
 
     body{
-        overflow-x: visible;
+        overflow-x: hidden;
     }
     
     @keyframes slider{
