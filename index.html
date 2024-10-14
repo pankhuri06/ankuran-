@@ -7,8 +7,25 @@
     <link rel="icon" type="image/png" href="mhsymbolic.png">
     <link rel="stylesheet" href="styles.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+         .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+    </style>
 </head>
+    
 <body>
+    <video autoplay muted loop class="video-bg">
+        <source src="const2.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    
     <!-- Header Section -->
 <header>
     <div class="logos">
