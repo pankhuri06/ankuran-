@@ -68,13 +68,14 @@ header {
 /* Navbar Styles */
 .navbar{
     background-color: #3b0c3e;
-    opacity: 0.3;
+    opacity: 0.6;
     display: flex;
     justify-content:center;
     align-items: center;
     position: sticky;
     top: 90px;
     z-index: 100;
+/*     z-index:-1; */
     width: 100%;
 }
 
@@ -83,10 +84,12 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+/*     z-index:1; */
 }
 
 nav ul li {
     margin: 0 20px;
+/*     z-index:1; */
 }
 
 nav ul li a {
@@ -96,6 +99,7 @@ nav ul li a {
     font-size: 1.3rem;
     padding: 10px 15px;
     transition: color 0.3s ease;
+/*     z-index:1; */
 }
 
 nav ul li a:hover {
