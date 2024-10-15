@@ -491,6 +491,12 @@ footer {
 }
 
 /* Responsive Navbar */
+@media (max-width: 640px) {
+
+    .insta-ankuran{
+       padding: 10px 13rem;
+    }
+
 @media (max-width: 768px) {
 
     .insta-ankuran{
