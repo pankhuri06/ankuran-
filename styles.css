@@ -494,12 +494,19 @@ footer {
 @media (max-width: 768px) {
 
     .insta-ankuran{
-       padding: 10px 15rem;
+       padding: 10px 14rem;
     }
 
     .insta-logo{
         width:30px;
         height: 30px;
+    }
+
+    .hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-top: 39rem;
     }
 
     nav ul {
