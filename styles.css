@@ -68,7 +68,7 @@ header {
 /* Navbar Styles */
 .navbar{
     background-color: #3b0c3e;
-    opacity: 0.5;
+    opacity: 0.3;
     display: flex;
     justify-content:center;
     align-items: center;
