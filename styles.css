@@ -57,7 +57,7 @@ header {
   }
 
   .insta-ankuran{
-  padding: 10px 80rem;
+/*   padding: 10px 80rem; */
 /*       padding: 10px 30rem; */
   }
 
@@ -496,7 +496,7 @@ footer {
 @media (max-width: 768px) {
 
     .insta-ankuran{
-       padding: 10px 17rem;
+/*        padding: 10px 17rem; */
     }
 
     .insta-logo{
