@@ -1,13 +1,6 @@
 /* General Styles */
-*{
-    box-sizing: border-box;
-    max-width: 100%;
-}
-
 body {
-    padding:0;
     margin: 0;
-    overflow-x: hidden;
     font-family: Arial, sans-serif;
     background-color: #1a1a1a;
     color: #ffffff;
@@ -16,7 +9,11 @@ body {
     background-size: cover;
     background-attachment: fixed;
     background-size: contain;
-/*     height: 100%; */
+    /* height: 100%; */
+    overflow-x: hidden;
+    /* background-repeat: no-repeat;
+    position: sticky; */
+
 }
 
 
@@ -26,11 +23,12 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #2b002e;
+    /* background-color: black; */
     padding: 20px 30px;
     position: sticky;
     top: 0;
     z-index: 100;
-    width: 100%;
+    width: 96%;
 }
 
 .logos {
@@ -72,14 +70,14 @@ header {
 /* Navbar Styles */
 .navbar{
     background-color: #3b0c3e;
-    opacity: 0.6;
+    /* background-color: black; */
+    opacity: 0.8;
     display: flex;
     justify-content:center;
     align-items: center;
     position: sticky;
     top: 90px;
-    z-index: 100;
-/*     z-index:-1; */
+    /* z-index: -1; */
     width: 100%;
 }
 
@@ -88,12 +86,12 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-/*     z-index:1; */
+    /* z-index: 1; */
 }
 
 nav ul li {
     margin: 0 20px;
-/*     z-index:1; */
+    /
 }
 
 nav ul li a {
@@ -103,7 +101,7 @@ nav ul li a {
     font-size: 1.3rem;
     padding: 10px 15px;
     transition: color 0.3s ease;
-/*     z-index:1; */
+    /* z-index: 1; */
 }
 
 nav ul li a:hover {
@@ -122,12 +120,13 @@ nav ul li a:hover {
     position: relative;
     text-align: center;
     color: white;
-    margin-top:42rem;
+    margin-top: 42rem;
 }
 
 .hero img {
     width: 100%;
-    height: auto;
+    /* height: auto; */
+    height: 100%;
 }
 
 .hero-content {
@@ -243,6 +242,9 @@ nav ul li a:hover {
     padding: 50px;
     text-align: center;
     background-color: #2e2e2e;
+    /* background-image: url("mh bg6.png") ;
+    background-size: contain; */
+    /* opacity: 10%; */
 }
 
 /* Events Section */
@@ -489,10 +491,10 @@ footer {
 }
 
 /* Responsive Navbar */
-@media (max-width: 769px) {
+@media (max-width: 768px) {
 
     .insta-ankuran{
-       padding: 10px 14rem;
+       padding: 10px 17rem;
     }
 
     .insta-logo{
@@ -560,12 +562,7 @@ footer {
     }
 }
 
-@media (max-width: 769px){
-
-    body{
-       overflow-x: hidden;
-    }
-    
+@media (max-width: 768px){
     @keyframes slider{
         0%{ left: 0;}
         5%{ left: 0;}
