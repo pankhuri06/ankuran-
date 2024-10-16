@@ -286,6 +286,10 @@ nav ul li a:hover {
     gap: 20px;
 }
 
+.event-grid h2,p{
+    color: white;
+}
+
 .event-card {
     background-color: #2e2e2e;
     padding: 20px;
