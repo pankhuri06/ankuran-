@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
   const content = document.getElementById('content');
 
   // Ensure the loader shows for 5 seconds
-  const loaderDuration = 4000;
+  const loaderDuration = 3000;
 
   // Debugging: Log the visibility status
   console.log('Loader wrapper:', loaderWrapper.style.display);
