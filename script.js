@@ -1,3 +1,28 @@
+
+//for loader
+window.addEventListener('load', () => {
+  const loaderWrapper = document.getElementById('loader-wrapper');
+  const content = document.getElementById('content');
+
+  // Ensure the loader shows for 5 seconds
+  const loaderDuration = 5000;
+
+  // Debugging: Log the visibility status
+  console.log('Loader wrapper:', loaderWrapper.style.display);
+  console.log('Content:', content.style.display);
+
+  // Hide the loader and show the content after 5 seconds
+  setTimeout(() => {
+    loaderWrapper.style.display = 'none';
+    content.style.display = 'block';
+
+    // Debugging: Log the visibility status after timeout
+    console.log('Loader wrapper after timeout:', loaderWrapper.style.display);
+    console.log('Content after timeout:', content.style.display);
+  }, loaderDuration);
+});
+
+
 function toggleMenu() {
     const nav = document.querySelector('nav');
     nav.classList.toggle('active');
