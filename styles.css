@@ -445,7 +445,8 @@ nav ul li a:hover {
 /*     background-size: contain; */
     background-color: black;
     text-align: center;
-    background-color: #2e2e2e;
+/*     background-color: #2e2e2e; */
+    background-color: rgb(19, 14, 18);
     overflow: hidden;
     height: 40rem;
 }
