@@ -20,14 +20,14 @@
   }
   
   .loader img {
-    width: 500px; /* Increase this value to enlarge the crane */
-    height: 400px;  /* Maintain aspect ratio */
+    width: 700px; /* Increase this value to enlarge the crane */
+    height: 600px;  /* Maintain aspect ratio */
   }
 
  @media (max-width: 768px){
     .loader img {
-        width: 400px; /* Increase this value to enlarge the crane */
-        height: 300px;  /* Maintain aspect ratio */
+        width: 700px; /* Increase this value to enlarge the crane */
+        height: 500px;  /* Maintain aspect ratio */
       }
   }
  
