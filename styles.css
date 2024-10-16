@@ -596,15 +596,15 @@ footer {
     @keyframes slider{
         0%{ left: 0;}
         5%{ left: 0;}
-        20%{left: -90%;}
-        28%{left: -90%;}
-        40%{ left: -153%;}
-        47%{ left: -153%;}
-        60%{ left: -210%;}
-        67%{ left: -210%;}
-        80%{ left: -278%;}
-        87%{ left: -278%;}
-        100%{ left: -350%;}
+        20%{left: -70%;}
+        28%{left: -70%;}
+        40%{ left: -210%;}
+        47%{ left: -210%;}
+        60%{ left: -360%;}
+        67%{ left: -360%;}
+        80%{ left: -500%;}
+        87%{ left: -500%;}
+        100%{ left: -650%;}
     }
 
     .event-gallery {
@@ -612,16 +612,17 @@ footer {
         justify-content: center;
         gap: 80px;
         position: relative;
-        width: 400%;
+        height: 100%;
+        width: 100%;
         margin-top: 7rem;
         left: 0;
-        animation : 14s slider  infinite;
+        animation : 11s slider  infinite;
     }
 
     .event-gallery img {
         float: left;
-        width: 120px;
-        height: 135px;
+         width: 18rem;
+        height: 19rem;
         border-radius: 8px;
         box-shadow: 6px 6px #2b002e;
     }
