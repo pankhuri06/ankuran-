@@ -443,6 +443,7 @@ nav ul li a:hover {
     text-align: center;
     background-color: #2e2e2e;
     overflow: hidden;
+    height: 40rem;
 }
 
 .past-events, .sponsers, .events, .about-us h1{
@@ -456,7 +457,7 @@ nav ul li a:hover {
     gap: 300px;
     position: relative;
     /* width: 400%; */
-    margin: 0;
+    margin-top: 6rem;
     left: 0;
     animation : 25s slider  infinite;
 }
