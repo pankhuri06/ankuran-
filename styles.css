@@ -445,6 +445,11 @@ nav ul li a:hover {
     overflow: hidden;
 }
 
+.past-events, .sponsers, .events, .about-us h1{
+    color: red;
+    /* font-size: 2.5rem; */
+}
+
 .event-gallery {
     display: flex;
     justify-content: center;
