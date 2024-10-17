@@ -255,7 +255,7 @@ nav ul li a:hover {
 }
 
 .contact-form button:hover {
-    background-color: #4a13c8; /* Slightly darker purple */
+    background-color: black;
 }
 
 @media (max-width: 768px) {
