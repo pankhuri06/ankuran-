@@ -68,18 +68,51 @@
 </header>
 
 <div class="navbar">
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html" class="active">About Us</a></li>
-            <li><a href="events.html" class="active">Events</a></li>
-            <li><a href="past-events.html" class="active">Past Events</a></li>
-            <li><a href="contact.html" class="active">Contact</a></li>
-            <li><a href="sponsors.html" class="active">Sponsors</a></li>
-        </ul> 
-         <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
-    </nav>
-</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="past-events.html">Past events</a></li>
+                <li><a href="sponsors.html">Sponsors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="login-nav"><a href="login.html">Login</a></li>
+                <li id="signup-nav"><a href="signup.html">Sign Up</a></li>
+                <li id="profile-nav" style="display:none;"><a href="profile.html">Profile</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+        </nav>
+        
+        <script type="module">
+            import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+        
+            const firebaseConfig = {
+                apiKey: "AIzaSyDyUtZ_uPF65ZbFRuHst_nmao6y0xbqev4",
+                authDomain: "ankuran-2024.firebaseapp.com",
+                projectId: "ankuran-2024",
+                storageBucket: "ankuran-2024.appspot.com",
+                messagingSenderId: "25175569346",
+                appId: "1:25175569346:web:3ce91557b0438e18cddc5b"
+            };
+        
+            const app = initializeApp(firebaseConfig);
+            const auth = getAuth(app);
+        
+            onAuthStateChanged(auth, (user) => {
+                if (user) {
+                    document.getElementById('login-nav').style.display = 'none';
+                    document.getElementById('signup-nav').style.display = 'none';
+                    document.getElementById('profile-nav').style.display = 'block';
+                } else {
+                    document.getElementById('login-nav').style.display = 'block';
+                    document.getElementById('signup-nav').style.display = 'block';
+                    document.getElementById('profile-nav').style.display = 'none';
+                }
+            });
+        </script>
+        
+    </div>
 
     
 
