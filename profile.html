@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Ankuran 2024</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 0;
+        color: #333;
+    }
+    
+    .profile-container {
+        background-color: #fff;
+        max-width: 600px;
+        margin: 50px auto;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+    
+    h1 {
+        color: #6A1B9A; /* Deep purple */
+        text-align: center;
+    }
+    
+    p {
+        font-size: 1.2rem;
+        margin: 15px 0;
+    }
+    
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 1rem;
+    }
+    
+    button {
+        width: 100%;
+        padding: 12px;
+        background-color: #d81b60; /* Bright pink */
+        color: white;
+        border: none;
+        border-radius: 4px;
+        font-size: 1.1rem;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #ad1457; /* Darker pink on hover */
+    }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Welcome <span id="username"></span></h1>
+        <p>Email: <span id="email"></span></p>
+        
+        <form>
+          <label for="branch">Branch</label>
+          <input type="text" id="branch" name="branch">
+          
+          <label for="year">Year</label>
+          <input type="text" id="year" name="year">
+          
+          <label for="eventParticipation">Event Participation</label>
+          <input type="text" id="eventParticipation" name="eventParticipation">
+          
+          <button type="submit">Update Info</button>
+        </form>
+      </div>
+      
+
+    <script type="module">
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+        import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDyUtZ_uPF65ZbFRuHst_nmao6y0xbqev4",
+            authDomain: "ankuran-2024.firebaseapp.com",
+            projectId: "ankuran-2024",
+            storageBucket: "ankuran-2024.appspot.com",
+            messagingSenderId: "25175569346",
+            appId: "1:25175569346:web:3ce91557b0438e18cddc5b"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        const db = getFirestore(app);
+
+        let userDocRef;
+
+        onAuthStateChanged(auth, async (user) => {
+            if (user) {
+                document.getElementById('email').innerText = user.email;
+                userDocRef = doc(db, 'users', user.uid);
+                const docSnap = await getDoc(userDocRef);
+
+                if (docSnap.exists()) {
+                    document.getElementById('branch').value = docSnap.data().branch || '';
+                    document.getElementById('year').value = docSnap.data().year || '';
+                    document.getElementById('events').value = docSnap.data().events || '';
+                } else {
+                    console.log("No such document!");
+                }
+            } else {
+                window.location.href = "login.html";
+            }
+        });
+
+        document.getElementById('save-btn').addEventListener('click', async () => {
+            const branch = document.getElementById('branch').value;
+            const year = document.getElementById('year').value;
+            const events = document.getElementById('events').value;
+
+            await setDoc(userDocRef, { branch, year, events }, { merge: true });
+            alert("Profile updated successfully!");
+        });
+    
+        // Import necessary Firebase functions
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+      
+        
+      
+        // Fetch user data when logged in
+        onAuthStateChanged(auth, (user) => {
+          if (user) {
+            const userId = user.uid;
+            const userRef = ref(database, 'users/' + userId);
+      
+            onValue(userRef, (snapshot) => {
+              const data = snapshot.val();
+              document.getElementById('username').textContent = data.username;
+              document.getElementById('email').textContent = data.email;
+              document.getElementById('branch').value = data.branch;
+              document.getElementById('year').value = data.year;
+              document.getElementById('eventParticipation').value = data.eventParticipation;
+            });
+          } else {
+            // User is not logged in, redirect to login
+            window.location.href = 'login.html';
+          }
+        });
+      </script>
+      
+</body>
+</html>
