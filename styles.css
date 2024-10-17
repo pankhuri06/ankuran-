@@ -16,6 +16,7 @@
     flex-direction: column;
     align-items: center;
     background-color: black;
+    background-image: url("black.gif");
     z-index: 9999; /* Ensures the loader is on top of everything else */
   }
   
