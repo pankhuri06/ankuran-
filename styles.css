@@ -72,7 +72,8 @@ header {
 }
 
 .ankuran-logo {
-    height: 45px;
+    height: 60px;
+    width: 59px;
 }
 
 .social-media {
@@ -441,9 +442,9 @@ nav ul li a:hover {
 
 .past-events {
     padding: 30px 50px 50px 50px;
-/*     background-image: url("mh bg4.png") ; */
-/*     background-size: contain; */
-    background-color: black;
+    background-image: url("past-bg.jpg") ;
+    background-size: contain;
+/*     background-color: black; */
     text-align: center;
 /*     background-color: #2e2e2e; */
     background-color: rgb(19, 14, 18);
