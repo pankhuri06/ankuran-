@@ -179,10 +179,14 @@ nav ul li a:hover {
     text-align: center;
 }
 
+.contact-section p{
+    color:black;
+}
+
 .contact-section h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #5e17eb; /* Deep purple */
+    color: #BF0904; 
 }
 
 .contact-section p {
@@ -246,7 +250,7 @@ nav ul li a:hover {
 .contact-form button {
     padding: 10px 20px;
     font-size: 1.1rem;
-    background-color: #5e17eb; /* Deep purple */
+    background-color: #BF0904; 
     color: white;
     border: none;
     border-radius: 5px;
