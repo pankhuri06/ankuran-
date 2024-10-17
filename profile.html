@@ -11,11 +11,11 @@
         background-color: #f4f4f4;
         margin: 0;
         padding: 0;
-        color: #333;
+        color: white;
     }
     
     .profile-container {
-        background-color: #090909;
+        background-color: black;
         border: 2px solid #BF0904;
         max-width: 600px;
         margin: 50px auto;
@@ -32,10 +32,6 @@
     p {
         font-size: 1.2rem;
         margin: 15px 0;
-    }
-
-    p,label{
-        color:white;
     }
     
     input[type="text"] {
@@ -59,7 +55,7 @@
     }
     
     button:hover {
-        background-color: #BF0904; /* Darker pink on hover */
+        background-color: #1f1c1b; /* Darker pink on hover */
     }
     </style>
 </head>
@@ -69,6 +65,9 @@
         <p>Email: <span id="email"></span></p>
         
         <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name">
+
           <label for="branch">Branch</label>
           <input type="text" id="branch" name="branch">
           
@@ -78,14 +77,14 @@
           <label for="eventParticipation">Event Participation</label>
           <input type="text" id="eventParticipation" name="eventParticipation">
           
-          <button type="submit">Update Info</button>
+          <button type="button" id="save-btn">Update Info</button>
         </form>
       </div>
       
 
     <script type="module">
         import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
-        import { getFirestore, doc, getDoc, setDoc } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
+        import { getDatabase, ref, onValue, update } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
 
         const firebaseConfig = {
@@ -99,62 +98,48 @@
 
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
-        const db = getFirestore(app);
+        const database = getDatabase(app);
 
-        let userDocRef;
+        let userId;
 
-        onAuthStateChanged(auth, async (user) => {
-            if (user) {
-                document.getElementById('email').innerText = user.email;
-                userDocRef = doc(db, 'users', user.uid);
-                const docSnap = await getDoc(userDocRef);
-
-                if (docSnap.exists()) {
-                    document.getElementById('branch').value = docSnap.data().branch || '';
-                    document.getElementById('year').value = docSnap.data().year || '';
-                    document.getElementById('events').value = docSnap.data().events || '';
-                } else {
-                    console.log("No such document!");
-                }
-            } else {
-                window.location.href = "login.html";
-            }
-        });
-
-        document.getElementById('save-btn').addEventListener('click', async () => {
-            const branch = document.getElementById('branch').value;
-            const year = document.getElementById('year').value;
-            const events = document.getElementById('events').value;
-
-            await setDoc(userDocRef, { branch, year, events }, { merge: true });
-            alert("Profile updated successfully!");
-        });
-    
-        // Import necessary Firebase functions
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-database.js";
-        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
-      
-        
-      
         // Fetch user data when logged in
         onAuthStateChanged(auth, (user) => {
           if (user) {
-            const userId = user.uid;
+            userId = user.uid;
             const userRef = ref(database, 'users/' + userId);
-      
+
             onValue(userRef, (snapshot) => {
               const data = snapshot.val();
-              document.getElementById('username').textContent = data.username;
-              document.getElementById('email').textContent = data.email;
-              document.getElementById('branch').value = data.branch;
-              document.getElementById('year').value = data.year;
-              document.getElementById('eventParticipation').value = data.eventParticipation;
+              document.getElementById('username').textContent = data.username || 'User';
+              document.getElementById('email').textContent = user.email;
+              document.getElementById('name').value = data.name || '';
+              document.getElementById('branch').value = data.branch || '';
+              document.getElementById('year').value = data.year || '';
+              document.getElementById('eventParticipation').value = data.eventParticipation || '';
             });
           } else {
-            // User is not logged in, redirect to login
+            // Redirect to login if user is not logged in
             window.location.href = 'login.html';
           }
+        });
+
+        // Save updated profile data
+        document.getElementById('save-btn').addEventListener('click', () => {
+          const name = document.getElementById('name').value;
+          const branch = document.getElementById('branch').value;
+          const year = document.getElementById('year').value;
+          const eventParticipation = document.getElementById('eventParticipation').value;
+
+          update(ref(database, 'users/' + userId), {
+            name: name,
+            branch: branch,
+            year: year,
+            eventParticipation: eventParticipation
+          }).then(() => {
+            alert("Profile updated successfully!");
+          }).catch((error) => {
+            console.error("Error updating profile: ", error);
+          });
         });
       </script>
       
