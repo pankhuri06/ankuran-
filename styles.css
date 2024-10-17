@@ -280,6 +280,8 @@ nav ul li a:hover {
     padding: 50px;
     text-align: center;
     background-color: #1a1a1a;
+     background-image: url("events-bg.jpg");
+    background-size: contain;
 }
 
 .event-grid {
