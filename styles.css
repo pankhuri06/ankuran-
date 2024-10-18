@@ -771,8 +771,8 @@ footer {
     color: #000
   }
   
- .content-box  h1, p {
-    margin: 0 0 13px;
+ .content-box  h1, p, h2 {
+    margin: 0 0 9px;
   }
 
 
