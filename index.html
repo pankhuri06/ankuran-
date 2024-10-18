@@ -6,6 +6,10 @@
     <title>Ankuran 2024</title>
     <link rel="icon" type="image/png" href="mhsymbolic.png">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <style>
          .video-bg {
@@ -182,22 +186,39 @@
     </section>
  
      <!-- Past Events Section -->
-     <section class="past-events">
-         <h1>Past Events</h1>
-         <div class="event-gallery">
-             <img src="image 1.png" alt="Past Event 1" >
-             <img src="image 2.png" alt="Past Event 2" >
-             <img src="image 3.png" alt="Past Event 3" >
-             <img src="image 4.png" alt="Past Event 4" >
-             <img src="image 5.png" alt="Past Event 5" >  
-             <img src="image 6.png" alt="Past Event 6" >
-             <img src="image 7.png" alt="Past Event 7" >
-             <img src="image 8.png" alt="Past Event 8" >
-             <img src="image 9.png" alt="Past Event 9" >
-             <img src="image 1.png" alt="Past Event 1" >
-         </div>
-     </section>
+    <div class="ribbon">
+        <img src="res/ribbon.png" class="ribbonImg">
+    </div>
 
+    <div class="parallax3" id="past-events">
+        <h2 class="subTitles eventtitle">Events</h2>
+
+        <section class="home" id="home">
+
+            <div class="swiper mySwiper home-slider">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide"><img src="res/event/1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/3.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/4.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/5.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/6.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/7.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/8.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/9.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/10.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/11.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/12.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/13.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/14.jpg" alt=""></div>
+                    <div class="swiper-slide"><img src="res/event/15.jpg" alt=""></div>
+                   
+
+                </div>
+            </div>
+
+        </section>
  
 
     <!-- Sponsors Section -->
@@ -224,5 +245,33 @@
    </div>     
 
     <script src="script.js"></script>
+           
+    <script src="https://kit.fontawesome.com/536b7f8348.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+
+
+
+        var swiper = new Swiper(".home-slider", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+                slideShadows: true,
+            },
+            loop: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            }
+        });
+
+       
+    </script>
 </body>
 </html>
