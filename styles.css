@@ -749,3 +749,24 @@ footer {
 }
 
 
+/* transparent box */
+.content-box{
+    height: 200px;
+    width: 200px;
+}
+
+.content-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.5); /* More transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: #000
+  }
+  
+  h1, p {
+    margin: 0 0 10px;
+  }
