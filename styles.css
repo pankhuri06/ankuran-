@@ -628,6 +628,10 @@ footer {
     background-size: cover;
 }
 
+#past-events h1{
+    text-align: center;
+}
+
 .parallax3 {
     background-image: url("events-img.jpg");
     min-height: 50vh;
@@ -686,6 +690,10 @@ footer {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+#past-events h1{
+    text-align: center;
 }
 
 .parallax3 {
