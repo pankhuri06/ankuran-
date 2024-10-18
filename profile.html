@@ -16,15 +16,30 @@
         background-size: contain;
     }
     
-    .profile-container {
+   .profile-container {
         background-color: #090909;
-        max-width: 600px;
+        /* max-width: 260px; */
+        max-width: 400px;
         margin: 50px auto;
         padding: 20px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
         border: 2px solid #BF0904;
     }
+
+    @media(max-width: 768px){
+      .profile-container {
+        background-color: #090909;
+        max-width: 260px;
+        /* max-width: 400px; */
+        margin: 50px auto;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        border: 2px solid #BF0904;
+    }
+    }
+    
     
     h1 {
         color: #BF0904; /* Deep purple */
