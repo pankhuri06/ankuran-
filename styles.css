@@ -431,33 +431,7 @@ nav ul li a:hover {
     }
 }
 
-/* Past Events Section */
-@keyframes slider{
-    0%{ left: 0;}
-    5%{ left: 0;}
-    20%{left: -50%;}
-    25%{left: -50%;}
-    40%{ left: -100%;}
-    45%{ left: -100%;}
-    60%{ left: -150%;}
-    65%{ left: -150%;}
-    80%{ left: -200%;}
-    85%{ left: -200%;}
-    100%{ left: -250%;}
-}
 
-
-.past-events {
-    padding: 30px 50px 50px 50px;
-    background-image: url("past-bg.jpg") ;
-    background-size: contain;
-/*     background-color: black; */
-    text-align: center;
-/*     background-color: #2e2e2e; */
-    background-color: rgb(19, 14, 18);
-    overflow: hidden;
-    height: 40rem;
-}
 
 .past-events, .sponsers, .events, .about-us h1{
     color: red;
@@ -643,3 +617,127 @@ footer {
         display: none;
     }
 }
+
+
+/* past-events slider */
+.parallax3,
+.past-events {
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3 {
+    background-image: url("events-img.jpg");
+    min-height: 50vh;
+}
+
+
+.ribbon {
+    overflow-x: hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+.ribbonImg {
+    width: 120vw;
+    min-height: 6vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+.eventImg {
+    max-width: 30vmax;
+    padding: 3vw;
+}
+
+.parallax3 {
+    padding-bottom: 4em;
+}
+
+
+.home  {
+    color: #fff;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+}
+
+.home .home-slider .swiper-slide {
+    overflow: hidden;
+    border-radius: .5rem;
+    max-height: 80vh;
+    max-width: 90vw;
+    height: 486px;
+    width: 342px;
+}
+
+.home .home-slider .swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media(max-width: 768px){
+    .parallax3,
+.past-events {
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3 {
+    background-image: url("past-bg.jpg");
+    min-height: 50vh;
+}
+
+
+.ribbon {
+    overflow-x: hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+.ribbonImg {
+    width: 120vw;
+    min-height: 6vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.eventImg {
+    max-width: 30vmax;
+    padding: 3vw;
+}
+
+.parallax3 {
+    padding-bottom: 4em;
+}
+
+
+.home  {
+    color: #fff;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+}
+
+.home .home-slider .swiper-slide {
+    overflow: hidden;
+    border-radius: .5rem;
+    max-height: 80vh;
+    max-width: 90vw;
+    height: 486px;
+    width: 342px;
+}
+
+.home .home-slider .swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+}
+
+
