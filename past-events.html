@@ -5,6 +5,138 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Past Events - Ankuran 2024</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .parallax3,
+.past-events {
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3 {
+    background-image: url("past-bg.jpg");
+    min-height: 50vh;
+}
+
+
+.ribbon {
+    overflow-x: hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+.ribbonImg {
+    width: 120vw;
+    min-height: 6vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+
+.eventImg {
+    max-width: 30vmax;
+    padding: 3vw;
+}
+
+.parallax3 {
+    padding-bottom: 4em;
+}
+
+
+.home  {
+    color: #fff;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+}
+
+.home .home-slider .swiper-slide {
+    overflow: hidden;
+    border-radius: .5rem;
+    max-height: 80vh;
+    max-width: 90vw;
+    height: 486px;
+    width: 342px;
+}
+
+.home .home-slider .swiper-slide img {
+    height: 130%;
+    width: 100%;
+    object-fit: cover;
+}
+
+footer{
+    margin-bottom: 0;
+}
+
+@media(max-width: 768px){
+    .parallax3,
+.past-events {
+    position: relative;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax3 {
+    /* background-image: url("events-img.jpg"); */
+    min-height: 50vh;
+}
+
+
+.ribbon {
+    overflow-x: hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+.ribbonImg {
+    width: 120vw;
+    min-height: 6vh;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.eventImg {
+    max-width: 30vmax;
+    padding: 3vw;
+}
+
+.parallax3 {
+    padding-bottom: 4em;
+}
+
+
+.home  {
+    color: #fff;
+    font-size: 4.5rem;
+    text-transform: uppercase;
+}
+
+.home .home-slider .swiper-slide {
+    overflow: hidden;
+    border-radius: .5rem;
+    max-height: 80vh;
+    max-width: 90vw;
+    height: 486px;
+    width: 342px;
+}
+
+.home .home-slider .swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+}
+
+
+    </style>
 </head>
 <body>
     <header>
@@ -14,31 +146,46 @@
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="events.html">Events</a></li>
-                    <li><a href="past-events.html"  class="active">Past Events</a></li>
+                    <li><a href="events.html" >Events</a></li>
+                    <li><a href="past-events.html" >Past Events</a></li>
                     <li><a href="contact.html">Contact</a></li>
-<!--                     <li><a href="sponsors.html">Sponsors</a></li> -->
+                    <!-- <li><a href="sponsors.html">Sponsors</a></li> -->
+                    <li id="login-nav"><a href="login.html">Login</a></li>
+                    <li id="signup-nav"><a href="signup.html">Sign Up</a></li>
+                    <li id="profile-nav" style="display:none;"><a href="profile.html">Profile</a></li>
                 </ul> 
                  <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
             </nav>
         </div>
     </header>
 
-    <section class="past-events">
+    
+    <div class="ribbon">
+        <img src="res/ribbon.png" class="ribbonImg">
+    </div>
+
+    <div class="parallax3" id="past-events">
         <h1>Past Events</h1>
-        <div class="event-gallery">
-            <img src="image 1.png" alt="Past Event 1" >
-            <img src="image 2.png" alt="Past Event 2" >
-            <img src="image 3.png" alt="Past Event 3" >
-            <img src="image 4.png" alt="Past Event 4" >
-            <img src="image 5.png" alt="Past Event 5" >  
-            <img src="image 6.png" alt="Past Event 6" >
-            <img src="image 7.png" alt="Past Event 7" >
-            <img src="image 8.png" alt="Past Event 8" >
-            <img src="image 9.png" alt="Past Event 9" >
-            <img src="image 1.png" alt="Past Event 1" >
-        </div>
-    </section>
+        <!-- <h2 class="subTitles eventtitle">Events</h2> -->
+
+        <section class="home" id="home">
+
+            <div class="swiper mySwiper home-slider">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide"><img src="image 1.png" alt=""></div>
+                    <div class="swiper-slide"><img src="image 2.png" alt=""></div>
+                    <div class="swiper-slide"><img src="image 3.png" alt=""></div>
+                    <div class="swiper-slide"><img src="image 4.png" alt=""></div>
+                    <div class="swiper-slide"><img src="image 5.png" alt=""></div>
+                    <div class="swiper-slide"><img src="image 6.png" alt=""></div>
+                    <div class="swiper-slide"><img src="image 7.png" alt=""></div>
+                    <div class="swiper-slide"><img src="image 8.png" alt=""></div>
+                    <div class="swiper-slide"><img src="image 9.png" alt=""></div>
+
+
+                </div>
+            </div>
 
     <footer>
         <!-- Footer content -->
