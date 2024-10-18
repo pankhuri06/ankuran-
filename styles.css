@@ -773,6 +773,16 @@ footer {
     color: #000
   }
   
-  h1, p {
-    margin: 0 0 10px;
+  .content-box p, h2{
+    font-family: cursive;
+  }
+
+  .content-box h1{
+    font-style: Italic;
+    font-size: 2.5rem;
+  }
+
+  .content-box h2{
+    font-size: 1rem;
+    color: #BF0904;
   }
