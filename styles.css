@@ -611,6 +611,11 @@ footer {
     }
 }
 
+.parallax3 {
+    background-image: url("past-bg.jpg");
+    min-height: 50vh;
+}
+
 /* Desktop-specific */
 @media (min-width: 769px) {
     .hamburger {
