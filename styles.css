@@ -768,13 +768,12 @@ footer {
     flex-direction: column;
     align-items: center;
     border-radius: 50%;
-    text-align: center;
     color: #000
   }
   
-  .content-box  h1, p {
+/*   .content-box  h1, p {
     margin: 0 0 10px;
-  }
+  } */
 
   .content-box p, h2{
     font-family: cursive;
