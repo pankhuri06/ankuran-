@@ -46,5 +46,33 @@
         <p>Follow us on <a href="https://www.instagram.com/ankuran_2022" target="_blank">Instagram</a></p>
     </footer>
     <script src="script.js"></script>
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/536b7f8348.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+
+
+
+        var swiper = new Swiper(".home-slider", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+                slideShadows: true,
+            },
+            loop: true,
+            autoplay: {
+                delay: 1000,
+                disableOnInteraction: false,
+            }
+        });
+
+       
+    </script>
 </body>
 </html>
