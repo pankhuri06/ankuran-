@@ -751,21 +751,18 @@ footer {
 
 /* transparent box */
 .content-box{
-    height: 200px;
-    width: 200px;
+    height: 230px;
+    width: 230px;
 }
 
 .content-box {
     position: absolute;
-    /* height: 20rem;
-    width: 20rem; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.5);
     background-color: rgba(9, 9, 9, 0.9);
-    /* background-color: rgba(191, 9, 4, 0.5); */
     padding: 20px;
+    text-align: center;
     display: flex;
     justify-content: center;
     flex-direction: column;
