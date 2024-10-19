@@ -59,3 +59,10 @@ document.getElementById('contactForm').addEventListener('submit', function(event
 });
 
 // You can add JavaScript for your image sliders here later
+//event g form
+function redirectToForm() {
+            const eventFormUrl = document.getElementById('eventDropdown').value;
+            if (eventFormUrl) {
+                window.open(eventFormUrl, '_blank');
+            }
+        }
