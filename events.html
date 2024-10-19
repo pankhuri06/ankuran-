@@ -29,7 +29,39 @@
 
    <section class="events">
         <h1>Upcoming Events</h1>
-       <p>  Sign up or login to register for our exciting events !</p>
+      <!-- Dropdown for Event Registration -->
+        <label for="eventDropdown">Choose an event to register:</label>
+        <select id="eventDropdown" onchange="redirectToForm()">
+            <option value="" disabled selected>Select an event</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-ROBORace/viewform">Robo Race</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-ROBOSoccer/viewform">Robo Soccer</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-ROBOSumo/viewform">Robo Sumo</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-WaterRocket/viewform">Water Rocket</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-HackToInnovate/viewform">Hack to Innovate</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-TechQuiz/viewform">Technical Quiz</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-CodeClash/viewform">Code Clash</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-Hackathon/viewform">Hackathon (Software)</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-OpenStage/viewform">Open Stage</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-FashionShow/viewform">Fashion Show</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-Mushaira/viewform">Mushaira</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-CaptureMoments/viewform">Capture The Moments</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-Rangoli/viewform">Rangoli Making</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-FunnyGames/viewform">Funny Games</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-Cricket/viewform">Cricket</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-BadmintonGirls/viewform">Badminton (Girls)</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-Badminton/viewform">Badminton</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-Football/viewform">Football</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-Volleyball/viewform">Volleyball</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-TableTennis/viewform">Table Tennis</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-Chess/viewform">Chess</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-TugOfWar/viewform">Tug of War</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-ArmWrestling/viewform">Arm Wrestling</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-Race/viewform">Race</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-RaceGirls/viewform">Race (Girls)</option>
+            <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-ESports/viewform">E-Sports</option>
+        </select>
+
+
         <div class="event-grid">
             <div class="event-card">
                 <img src="events-img2.jpg" alt="Event 1">
