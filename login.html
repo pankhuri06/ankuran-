@@ -6,40 +6,61 @@
     <title>Login - Ankuran 2024</title>
     <link rel="stylesheet" href="styles.css"> 
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #1c1b29; 
-            background-image: url("black.gif");
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
+        header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #2b002e;
+          padding: 0 0px;
+          position: sticky;
+          top: 0;
+          z-index: 100;
+          width: 100%;
+        } 
+
+       nav ul {
+         display: flex;
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+          /* z-index: 1; */
         }
+
+       nav ul li {
+           margin: 0 20px;
+           transform: translateX(50px);
+           transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        }
+
+
         .login-container {
             background-color: #090909; 
             border: 2px solid #540402;
             /* box-shadow: 20px 20px #BF0904; */
             border-radius: 10px;
+            margin: 130px auto;
+            padding: 20px;
             padding: 40px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
             width: 350px;
             text-align: center;
         }
+
         h1 {
             /* color: #e91e63; */
             color: #BF0904;
             margin-bottom: 20px;
         }
+
         input {
-            width: 100%;
+            width: 80%;
             padding: 10px;
             margin: 10px 0;
             border: none;
             border-radius: 5px;
             font-size: 16px;
         }
+
         .btn {
             /* background-color: #e91e63; */
             background-color: #BF0904;
@@ -49,20 +70,56 @@
             font-size: 18px;
             border-radius: 5px;
             cursor: pointer;
-            width: 100%;
+            width: 87%;
+            margin-top: 20px;
         }
+
         .btn:hover {
             background-color: #BF0904;
         }
+
         a {
             color: #fff;
             text-decoration: none;
             margin-top: 10px;
             display: block;
         }
+
+        @media(max-width: 768px){
+      .login-container {
+        background-color: #090909;
+        max-width: 260px;
+        /* max-width: 400px; */
+        margin: 140px auto;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        border: 2px solid #BF0904;
+    }
+    }
     </style>
 </head>
 <body>
+
+    <header>
+        <!-- Include your navbar here -->
+        <div >
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="events.html" >Events</a></li>
+                    <li><a href="past-events.html" >Past Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <!-- <li><a href="sponsors.html">Sponsors</a></li> -->
+                    <li id="login-nav"><a href="login.html">Login</a></li>
+                    <li id="signup-nav"><a href="signup.html">Sign Up</a></li>
+                    <li id="profile-nav" style="display:none;"><a href="profile.html">Profile</a></li>
+                </ul> 
+                 <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            </nav>
+        </div>
+    </header>
     
     <div class="login-container">
         <h1>Login</h1>
@@ -108,6 +165,11 @@
                     console.error("Error logging in:", error.message);
                     alert("Login failed: " + error.message);
                 });
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
         });
     </script>
 </body>
