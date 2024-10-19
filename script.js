@@ -22,11 +22,24 @@ window.addEventListener('load', () => {
   }, loaderDuration);
 });
 
-
 function toggleMenu() {
     const nav = document.querySelector('nav');
     nav.classList.toggle('active');
+
+    const items = nav.querySelectorAll('li');
+  if (nav.classList.contains('active')) {
+    items.forEach((item, index) => {
+      setTimeout(() => {
+        item.classList.add('show');
+      }, 100 * (index + 1)); // Stagger the appearance of menu items
+    });
+  } else {
+    items.forEach(item => {
+      item.classList.remove('show');
+    });
+  }
 }
+
 
 document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent the form from submitting normally
