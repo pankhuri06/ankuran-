@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Events - Ankuran 2024</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+       .select{
+        margin-bottom: 20px;
+       }
+
+       .events select{
+        color: white;
+        font-size: 1rem;
+        height: 30px;
+        background-color: #2e2e2e;
+        border: 2px solid #BF0904;
+       }
+    </style>
 </head>
 <body>
     <header>
@@ -30,6 +43,7 @@
    <section class="events">
         <h1>Upcoming Events</h1>
       <!-- Dropdown for Event Registration -->
+   <div class="select">
         <label for="eventDropdown">Choose an event to register:</label>
         <select id="eventDropdown" onchange="redirectToForm()">
             <option value="" disabled selected>Select an event</option>
@@ -60,6 +74,9 @@
             <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-RaceGirls/viewform">Race (Girls)</option>
             <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-ESports/viewform">E-Sports</option>
         </select>
+
+       </div>
+
 
 
         <div class="event-grid">
