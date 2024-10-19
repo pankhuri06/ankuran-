@@ -6,21 +6,12 @@
     <title>Sign Up - Ankuran 2024</title>
     <link rel="stylesheet" href="styles.css"> <!-- Assuming you have a common styles.css file -->
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            /* background-color: #090909;  */
-            background-image: url("black.gif");
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+    
         .signup-container {
             background-color: #090909;
             border: 2px solid #BF0904;
             border-radius: 10px;
+            margin: 130px auto;
             padding: 40px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
             width: 350px;
@@ -32,7 +23,7 @@
             margin-bottom: 20px;
         }
         input {
-            width: 100%;
+            width: 80%;
             padding: 10px;
             margin: 10px 0;
             border: none;
@@ -48,7 +39,8 @@
             font-size: 18px;
             border-radius: 5px;
             cursor: pointer;
-            width: 100%;
+            margin-top: 18px;
+            width: 87%;
         }
         .btn:hover {
             /* background-color: #ff4081; */
@@ -60,10 +52,47 @@
             margin-top: 10px;
             display: block;
         }
+
+        @media(max-width: 768px){
+      .signup-container {
+        background-color: #090909;
+        max-width: 260px;
+        /* max-width: 400px; */
+        margin: 140px auto;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        border: 2px solid #BF0904;
+       }
+
+       nav ul li{
+        margin: 0;
+       }
+    }
     </style>
 </head>
 <body>
-        
+
+    <header>
+        <!-- Include your navbar here -->
+        <div >
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="events.html" >Events</a></li>
+                    <li><a href="past-events.html" >Past Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <!-- <li><a href="sponsors.html">Sponsors</a></li> -->
+                    <li id="login-nav"><a href="login.html">Login</a></li>
+                    <li id="signup-nav"><a href="signup.html">Sign Up</a></li>
+                    <li id="profile-nav" style="display:none;"><a href="profile.html">Profile</a></li>
+                </ul> 
+                 <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            </nav>
+        </div>
+    </header>
+
     
     <div class="signup-container">
         <h1>Sign Up</h1>
@@ -118,5 +147,6 @@
                 });
         });
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
