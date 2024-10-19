@@ -523,21 +523,59 @@ footer {
         top: 70px;
         right: 0;
         width: 100%;
+        opacity: 0;
+        transform: translateX(100%);
+        transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
     nav.active ul {
         display: flex;
+        opacity: 1;
+        transform: translateX(0);
+        animation: magicAppear 0.5s ease;
     }
+
 
     nav ul li {
         margin: 10px 0;
         text-align: center;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
     }
+
+    li.show {
+        opacity: 1;
+        transform: translateY(0);
+        animation: magicItemAppear 0.5s ease forwards;
+      }
 
     .hamburger {
         display: block;
     }
 }
+
+@keyframes magicAppear {
+    from {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes magicItemAppear {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 /* responsive slider */
 @media (max-width: 768px) and (min-width: 400px){
