@@ -800,7 +800,7 @@ footer {
 
 .content-box {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgba(9, 9, 9, 0.9);
@@ -815,7 +815,7 @@ footer {
   }
   
  .content-box  h1, p, h2 {
-    margin-bottom: 7px;
+    margin-bottom: 6px;
   }
 
 
