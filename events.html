@@ -51,7 +51,7 @@
         <h1>Upcoming Events</h1>
       <!-- Dropdown for Event Registration -->
    <div class="select">
-        <label for="eventDropdown">Choose an event to register:</label>
+        <label for="eventDropdown">Choose an event to register <p>(only when you are logged in):</p</label>
         <select id="eventDropdown" onchange="redirectToForm()">
             <option value="" disabled selected>Select an event</option>
             <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-ROBORace/viewform">Robo Race</option>
@@ -132,7 +132,36 @@
         <p>© 2024 Ankuran, IET Lucknow. All rights reserved.</p>
         <p>Follow us on <a href="https://www.instagram.com/ankuran_2022" target="_blank">Instagram</a></p>
     </footer>
-    <script>
+   <script type="module">
+        import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyDyUtZ_uPF65ZbFRuHst_nmao6y0xbqev4",
+            authDomain: "ankuran-2024.firebaseapp.com",
+            projectId: "ankuran-2024",
+            storageBucket: "ankuran-2024.appspot.com",
+            messagingSenderId: "25175569346",
+            appId: "1:25175569346:web:3ce91557b0438e18cddc5b"
+        };
+    
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+    
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                document.getElementById('login-nav').style.display = 'none';
+                document.getElementById('signup-nav').style.display = 'none';
+                document.getElementById('profile-nav').style.display = 'inline';
+                document.getElementById('eventDropdown').style.display = 'block'; // Show dropdown
+            } else {
+                document.getElementById('login-nav').style.display = 'inline';
+                document.getElementById('signup-nav').style.display = 'inline';
+                document.getElementById('profile-nav').style.display = 'none';
+                document.getElementById('eventDropdown').style.display = 'none'; // Hide dropdown
+            }
+        });
+       
         function redirectToForm() {
             const eventFormUrl = document.getElementById('eventDropdown').value;
             if (eventFormUrl) {
@@ -146,7 +175,7 @@ function moveSlide(step) {
     const totalSlides = document.querySelectorAll('.slide').length;
 
     currentSlide = (currentSlide + step + totalSlides) % totalSlides;
-    slides.style.transform = translateX(${-currentSlide * 100}%);
+    slides.style.transform = `translateX(${-currentSlide * 100}%)`;
 }
 
     </script>
