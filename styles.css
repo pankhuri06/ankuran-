@@ -503,7 +503,9 @@ nav ul li a:hover {
 footer {
     padding: 20px;
     text-align: center;
-    background-color: #1a1a1a;
+/*     background-color: #1a1a1a; */
+    background-color: #2b002e;
+    opacity: 0.9;
     color: #ffffff;
 }
 
