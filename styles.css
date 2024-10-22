@@ -534,6 +534,13 @@ footer {
         height: 30px;
     } */
 
+  .insta-logo {
+     width: 3.2rem;
+     height: 30px;
+     cursor: pointer;
+     top: 31px;
+   }
+
     nav ul {
         display: none;
         flex-direction: column;
