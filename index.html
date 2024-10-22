@@ -23,6 +23,39 @@
           overflow: hidden;
        }
 
+       .insta-ankuran{
+         margin-right: 65px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+       }
+
+       .brochure-btn{
+        outline-style: none;
+        border: none;
+        margin-left: 1.5rem;
+       border-radius: 3%;
+        height: 2rem;
+        height: 100%;
+        width: 100%;
+        font-size: 1.2rem;
+        background-color: #a20c07;
+        /* background-color: rgba(9, 9, 9, 0.9); */
+        box-shadow: 5px 5px #d99c99;
+       }
+
+       .brochure-btn a{
+        text-decoration: none;
+        color: white;
+        font-weight: 100;
+        text-shadow: 14%;
+       }
+
+       .brochure-btn a:hover{
+        cursor: pointer;
+        color: black;
+       }
+
        @media(max-width :768px){
         .video-bg {
           position: fixed;
@@ -33,6 +66,7 @@
           object-fit: cover;
           z-index: -1;
           overflow: hidden;
+         
        }
       }
 
@@ -40,18 +74,18 @@
       .Register{
         position: absolute;
         /* font-size: 2rem; */
-       top: 90%;
-       left: 50%;
-       transform: translate(-50%, -50%);
-       /* background-color: rgba(9, 9, 9, 0.9); */
-       padding: 20px;
-       text-align: center;
-       display: flex;
-       justify-content: center;
-       flex-direction: column;
-       align-items: center;
-       border-radius: 50%;
-       color: #000
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* background-color: rgba(9, 9, 9, 0.9); */
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 50%;
+    color: #000
       }
 
       #register-btn{
@@ -62,16 +96,20 @@
         background-color: rgba(9, 9, 9, 0.9);
         background-color: none;
         background-color: #2b002e;
+
+        /* background-color: black; */
         color: white;
         border-radius: 3%;
         opacity: 0.9;
+        /* border: 2px solid #BF0904; */
+        /* font-style: italic;
+        font-family: Arial, Helvetica, sans-serif; */
       }
 
-       #register-btn:hover {
+      #register-btn:hover {
         color: #Bf0904;
         cursor: pointer;
       }
-        
     </style>
 </head>
     
@@ -103,6 +141,7 @@
             <a href="https://www.instagram.com/ankuran_2024/" target="_blank">
               <img src="final-insta.png" alt="Instagram" class="insta-logo">
             </a>
+            <button class="brochure-btn"> <a href="Brochure (2).pdf" target="_blank" > <b> BROCHURE</b></a> </button>
     </div>
 </header>
 
