@@ -529,10 +529,10 @@ footer {
 /* Responsive Navbar */
 @media (max-width: 768px) {
 
-    .insta-logo{
+/*     .insta-logo{
         width:30px;
         height: 30px;
-    }
+    } */
 
     nav ul {
         display: none;
