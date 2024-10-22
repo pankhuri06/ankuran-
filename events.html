@@ -19,9 +19,15 @@
         border: 2px solid #090909;
        }
 
+       .dropdown{
+        display: flex;
+        justify-content: center;
+       }
+
         @media(max-width: 768px){
         #eventDropdown{
            margin-top: 10px;
+           right: 50%;
         }
        }
     </style>
@@ -52,6 +58,7 @@
       <!-- Dropdown for Event Registration -->
    <div class="select">
         <label for="eventDropdown">Choose an event to register <p>(only when you are logged in):</p</label>
+       <div class="dropdown">
         <select id="eventDropdown" onchange="redirectToForm()">
             <option value="" disabled selected>Select an event</option>
             <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-ROBORace/viewform">Robo Race</option>
@@ -82,6 +89,7 @@
             <option value="https://docs.google.com/forms/d/e/1FAIpQLSfD_U1zL0-ESports/viewform">E-Sports</option>
         </select>
 
+       </div>
        </div>
 
 
