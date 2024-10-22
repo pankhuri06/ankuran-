@@ -535,8 +535,10 @@ footer {
     } */
 
   .insta-logo {
-     width: 3.2rem;
-     height: 30px;
+/*      width: 3.2rem; */
+     width: 5rem;
+/*      height: 30px; */
+      height: 32px;
      cursor: pointer;
      top: 30px;
    }
