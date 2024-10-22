@@ -74,10 +74,17 @@ header {
 }
 
 @media(max-width: 768px){
-    .iet-logo, .ankuran-logo, .robotics-logo {
+ .iet-logo, .ankuran-logo, .robotics-logo {
     height: 47px;
     margin-right: 7px;
 }
+
+ .insta-logo {
+    width: 4.2rem;
+    height: 30px;
+    cursor: pointer;
+    top: 30px;
+  }
 }    
 
 
@@ -101,15 +108,6 @@ header {
     top: 28px;
 /*     margin-right: 24px; */
   }
-
-@media(max-width:768px){
-    .insta-logo {
-    width: 4.2rem;
-    height: 30px;
-    cursor: pointer;
-    top: 30px;
-  }
-}
 
 /* Navbar Styles */
 .navbar{
