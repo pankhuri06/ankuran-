@@ -102,6 +102,15 @@ header {
 /*     margin-right: 24px; */
   }
 
+@media(max-width:768px){
+    .insta-logo {
+    width: 4.2rem;
+    height: 30px;
+    cursor: pointer;
+    top: 30px;
+  }
+}
+
 /* Navbar Styles */
 .navbar{
     background-color: #3b0c3e;
