@@ -35,9 +35,44 @@
           overflow: hidden;
        }
       }
+
+
+      .Register{
+        position: absolute;
+        /* font-size: 2rem; */
+       top: 90%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       /* background-color: rgba(9, 9, 9, 0.9); */
+       padding: 20px;
+       text-align: center;
+       display: flex;
+       justify-content: center;
+       flex-direction: column;
+       align-items: center;
+       border-radius: 50%;
+       color: #000
+      }
+
+      #register-btn{
+        border: none;
+        width: 18rem;
+        height: 4rem;
+        font-size: 1.6rem;
+        background-color: rgba(9, 9, 9, 0.9);
+        background-color: none;
+        background-color: #2b002e;
+        color: white;
+        border-radius: 3%;
+        opacity: 0.9;
+      }
+
+       #register-btn:hover {
+        color: #Bf0904;
+        cursor: pointer;
+      }
+        
     </style>
-
-
 </head>
     
 <body>
@@ -73,61 +108,79 @@
 
 <div class="navbar">
         <nav>
-            <ul>
+            <ul id="nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="events.html">Events</a></li>
                 <li><a href="past-events.html">Past events</a></li>
-<!--                 <li><a href="sponsors.html">Sponsors</a></li> -->
-                <li><a href="contact.html">Contact</a></li>
+                <li style="animation-delay: 0.1s;"><a href="contact.html">Contact</a></li>
                 <li id="login-nav"><a href="login.html">Login</a></li>
                 <li id="signup-nav"><a href="signup.html">Sign Up</a></li>
                 <li id="profile-nav" style="display:none;"><a href="profile.html">Profile</a></li>
             </ul>
             <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
         </nav>
-        
+
+        <!-- Firebase Auth State Check and Button Redirect -->
         <script type="module">
             import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
             import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
-        
+
+            // Firebase Config
             const firebaseConfig = {
                 apiKey: "AIzaSyDyUtZ_uPF65ZbFRuHst_nmao6y0xbqev4",
                 authDomain: "ankuran-2024.firebaseapp.com",
+                databaseURL: "YOUR_DATABASE_URL",
                 projectId: "ankuran-2024",
                 storageBucket: "ankuran-2024.appspot.com",
                 messagingSenderId: "25175569346",
                 appId: "1:25175569346:web:3ce91557b0438e18cddc5b"
             };
-        
+
+            // Initialize Firebase
             const app = initializeApp(firebaseConfig);
             const auth = getAuth(app);
-        
+
+            // Check User Authentication State
             onAuthStateChanged(auth, (user) => {
+                const registerButton = document.getElementById('register-btn');
+                
                 if (user) {
+                    // User is signed in
                     document.getElementById('login-nav').style.display = 'none';
                     document.getElementById('signup-nav').style.display = 'none';
                     document.getElementById('profile-nav').style.display = 'block';
+                    registerButton.onclick = () => {
+                        window.location.href = 'profile.html';
+                    };
                 } else {
+                    // No user is signed in
                     document.getElementById('login-nav').style.display = 'block';
                     document.getElementById('signup-nav').style.display = 'block';
                     document.getElementById('profile-nav').style.display = 'none';
+                    registerButton.onclick = () => {
+                        window.location.href = 'signup.html';
+                    };
                 }
             });
         </script>
-        
     </div>
 
+    <!-- <div class="above-bg"> -->
+        <div class="content-box">
+            <h2>WELCOME TO</h2>
+            <h1>ANKURAN'24</h1>
+            <p>Experience the Fusion of Innovation and Culture at ANKURAN: ECE's Signature Fest!</p>
+        </div>
+    
+        <!-- Register Now Button -->
+        <div class="Register">
+            <button id="register-btn">Register Now</button>
+        </div>
+    <!-- </div> -->
 
-    <div class="content-box">
-        <h2>WELCOME TO</h2>
-        <h1>ANKURAN'24</h1>
-        <p>Experience the Fusion of Innovation and Culture at ANKURAN: ECE's Signature Fest!</p>
-      </div>
-
-
-    <!-- Hero Section -->
-    <section class="hero">
+     <!-- Hero Section -->
+     <section class="hero">
         <img src="bg-image.png" alt="Ankuran 2024">
         <div class="hero-content">
            <!--  <h1>Ankuran 2024</h1> -->
@@ -276,5 +329,11 @@
 
        
     </script>
+
+    <!-- Add your other content sections here... -->
+
+    <script src="script.js"></script>
+    <script src="https://kit.fontawesome.com/536b7f8348.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
