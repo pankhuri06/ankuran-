@@ -16,7 +16,7 @@
         background-size: contain;
     }
     
-   .profile-container {
+    .profile-container {
         background-color: #090909;
         /* max-width: 260px; */
         max-width: 400px;
@@ -39,7 +39,6 @@
         border: 2px solid #BF0904;
     }
     }
-    
     
     h1 {
         color: #BF0904; /* Deep purple */
@@ -92,11 +91,32 @@
     button:hover {
         background-color: #BF0904; /* Darker pink on hover */
     }
+
+    .text, .Email{
+        display: flex;
+        justify-content: center;
+    }
+
+    .text p{
+        font-size: 1.3rem;
+    }
+
+    @media(max-width: 768px){
+        .text, .Email{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .text p{
+        font-size: 1rem;
+    }
+    }
     </style>
 </head>
 <body>
 
-    <header>
+  <header>
     <!-- Include your navbar here -->
     <div >
         <nav>
@@ -113,10 +133,11 @@
     </div>   
 </header>
 
-    
     <div class="profile-container">
         <h1>Profile <span id="username"></span></h1>
+       <div class="Email">
         <p>Email: <span id="email"></span></p>
+       </div>
         
         <form id="profileForm">
           <label for="name">Name</label>
@@ -127,8 +148,12 @@
           
           <label for="year">Year</label>
           <input type="text" id="year" name="year">
+
+          <div class="text">
+            <p> Go to event section for registration.</p>
+          </div>
           
-          <label for="eventParticipation">Event Participation</label>
+          <!-- <label for="eventParticipation">Event Participation</label>
           <select id="eventParticipation" name="eventParticipation">
               <option value="" disabled selected>Select an Event</option>
               <option value="roboRace">Robo Race</option>
@@ -157,7 +182,7 @@
               <option value="race">Race</option>
               <option value="raceGirls">Race (Girls)</option>
               <option value="eSports">E-Sports</option>
-          </select>
+          </select> -->
           
           <button type="submit">Update Info</button>
         </form>
@@ -235,9 +260,5 @@
             });
         });
     </script>
-</body>
-</html>
-      </script>
-      
 </body>
 </html>
