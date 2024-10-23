@@ -66,12 +66,47 @@ header {
 .logos {
     display: flex;
     align-items: center;
+    margin-left: 0rem;
 }
 
 .iet-logo, .ankuran-logo, .robotics-logo {
     height: 47px;
     margin-right: 13px;
 }
+
+/* @media(max-width: 768px){
+ .iet-logo, .ankuran-logo, .robotics-logo {
+    height: 47px;
+    margin-right: 7px;
+}
+
+ .insta-logo {
+    width: 3.2rem;
+    height: 30px;
+    cursor: pointer;
+    top: 31px;
+  }
+}    
+
+
+.ankuran-logo {
+    height: 60px;
+    width: 59px;
+}
+
+.social-media {
+    top: 26px;
+    right: 20px;
+  }
+
+
+.insta-logo {
+    width: 41px;
+    height: 30px;
+    cursor: pointer;
+    top: 28px;
+  }
+ */
 
 @media(max-width: 768px){
  .iet-logo, .ankuran-logo, .robotics-logo {
@@ -80,7 +115,7 @@ header {
 }
 
  .insta-logo {
-    width: 3.2rem;
+    width: 30px;
     height: 30px;
     cursor: pointer;
     top: 31px;
@@ -108,6 +143,7 @@ header {
     top: 28px;
 /*     margin-right: 24px; */
   }
+
 
 /* Navbar Styles */
 .navbar{
