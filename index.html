@@ -11,7 +11,7 @@
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-      <style>
+    <style>
          .video-bg {
          position: fixed;
          top: 0;
@@ -24,53 +24,52 @@
        }
 
        .insta-ankuran{
+         margin-right: 3rem;
          display: flex;
          flex-direction: flex-end;
-         /* justify-content: space-evenly; */
          align-items: center;
 
        }
 
        .brochure-btn{
-        outline-style: none;
         border: none;
-/*         margin-left: 1.2rem; */
-        margin-right: 1.7rem;
+        width: 12rem;
+        height: 4rem;
+        font-size: 1.6rem;
+        background-color: none;
+        background-color: #2b002e;
+        color: white;
         border-radius: 3%;
-        height: 2rem;
-        height: 100%;
-        width: 100%;
-        font-size: 1rem;
-        /* background-color: #a20c07;
-        box-shadow: 5px 5px #d99c99; */
-        background-color: #090909;
-        box-shadow: 5px 5px #5c5a5a;
+        opacity: 0.9;
+        box-shadow: 5px 5px #4c394e;
        }
 
        .brochure-btn a{
         text-decoration: none;
         /* color: white; */
-        color: #BF0904;
+        color: white;
        }
 
        @media(max-width: 768px){
 
-      .insta-ankuran{
+           .insta-ankuran{
+/*          margin-right: 50px; */
          display: flex;
          /* justify-content: space-evenly; */
          align-items: center;
        }
            
         .brochure-btn{
-        outline-style: none;
         border: none;
-        margin-left: 2.6rem;
+        width: 10rem;
+        height: 4rem;
+        font-size: 1.6rem;
+        background-color: none;
+        background-color: #2b002e;
+        color: white;
         border-radius: 3%;
-        height: 100%;
-        width: 100%;
-       font-size: 0.8rem;
-        background-color: #090909;
-        box-shadow: 5px 5px #5c5a5a;
+        opacity: 0.9;
+        box-shadow: 5px 5px #4c394e;
        }
 
        .brochure-btn a:hover{
@@ -78,11 +77,41 @@
         color: white;
        }
 
+       .Register{
+        position: absolute;
+       top: 90%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       padding: 20px;
+       text-align: center;
+       display: flex;
+       justify-content:space-between;
+       align-items: center;
+       border-radius: 50%;
+       color: #000;
+       gap: 0.4rem;
+
        }
 
-       .brochure-btn a:hover{
-        cursor: pointer;
+       #register-btn{
+        border: none;
+        width: 10rem;
+        height: 4rem;
+        font-size: 1.6rem;
+        background-color: none;
+        background-color: #2b002e;
         color: white;
+        border-radius: 3%;
+        opacity: 0.9;
+        box-shadow: 5px 5px #4c394e;
+      }
+    }
+
+       .brochure-btn a:hover{
+        /* cursor: pointer;
+        color: white; */
+        color: #Bf0904;
+        cursor: pointer;
        }
 
        @media(max-width :768px){
@@ -102,26 +131,28 @@
 
       .Register{
         position: absolute;
-        /* font-size: 2rem; */
        top: 90%;
        left: 50%;
        transform: translate(-50%, -50%);
+       /* background-color: rgba(9, 9, 9, 0.9); */
        padding: 20px;
        text-align: center;
        display: flex;
-       justify-content: center;
-       flex-direction: column;
+       justify-content:space-between;
+       /* flex-direction: column; */
        align-items: center;
        border-radius: 50%;
-       color: #000
+       color: #000;
+       gap: 4rem;
       }
 
       #register-btn{
         border: none;
-        width: 15rem;
+        width: 12rem;
         height: 4rem;
+        /* width: 100%;
+        height: 100%; */
         font-size: 1.6rem;
-        background-color: rgba(9, 9, 9, 0.9);
         background-color: none;
         background-color: #2b002e;
         color: white;
@@ -162,7 +193,8 @@
     </div>
 
      <div class="insta-ankuran ">
-<!--             <button class="brochure-btn"> <a href="Brochure (2).pdf" target="_blank" > <b> BROCHURE</b></a> </button> -->
+        
+            <!-- <button class="brochure-btn"> <a href="Brochure (2).pdf" target="_blank" > <b> BROCHURE</b></a> </button> -->
             <a href="https://www.instagram.com/ankuran_2024/" target="_blank">
                 <img src="final-insta.png" alt="Instagram" class="insta-logo">
               </a>
@@ -239,12 +271,13 @@
         <!-- Register Now Button -->
         <div class="Register">
             <button id="register-btn">Register Now</button>
+            <button class="brochure-btn"> <a href="Brochure (2).pdf" target="_blank" >  Brochure</a> </button>
         </div>
     <!-- </div> -->
 
      <!-- Hero Section -->
      <section class="hero">
-        <img src="bg-image.png.png" alt="Ankuran 2024">
+        <img src="bg-image.png" alt="Ankuran 2024">
         <div class="hero-content">
            <!--  <h1>Ankuran 2024</h1> -->
             <!-- <p>The Tech-Cultural Event of IET Lucknow</p> -->
