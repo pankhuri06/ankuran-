@@ -5,9 +5,36 @@
     <meta name="google-site-verification" content="AAckkZvSmcAqCNKCtDPORzNJon7UC5fUq33LzH8MgQI" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - Ankuran 2024</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Assuming you have a common styles.css file -->
+    <link rel="stylesheet" href="styles.css">
     <style>
-    
+        /* Navbar Styling */
+        header {
+            background-color: #090909;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .hamburger {
+            display: none;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Sign Up Form Styling */
         .signup-container {
             background-color: #090909;
             border: 2px solid #BF0904;
@@ -17,10 +44,10 @@
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
             width: 350px;
             text-align: center;
+            color: white;
         }
         h1 {
-            /* color: #e91e63;  */
-            color: #BF0904; 
+            color: #BF0904;
             margin-bottom: 20px;
         }
         input {
@@ -32,7 +59,6 @@
             font-size: 16px;
         }
         .btn {
-            /* background-color: #e91e63; */
             background-color: #BF0904;
             color: white;
             border: none;
@@ -44,8 +70,7 @@
             width: 87%;
         }
         .btn:hover {
-            /* background-color: #ff4081; */
-            background-color: #BF0904;
+            background-color: #ff4c4c;
         }
         a {
             color: #fff;
@@ -54,47 +79,48 @@
             display: block;
         }
 
-        @media(max-width: 768px){
-      .signup-container {
-        background-color: #090909;
-        max-width: 260px;
-        /* max-width: 400px; */
-        margin: 140px auto;
-        padding: 20px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        border: 2px solid #BF0904;
-       }
-
-       nav ul li{
-        margin: 0;
-       }
-    }
+        /* Responsive Styles */
+        @media(max-width: 768px) {
+            .signup-container {
+                max-width: 260px;
+                margin: 140px auto;
+                padding: 20px;
+                border-radius: 8px;
+            }
+            nav ul {
+                flex-direction: column;
+                display: none;
+            }
+            .hamburger {
+                display: block;
+                text-align: center;
+            }
+            nav ul.show {
+                display: flex;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <!-- Include your navbar here -->
-        <div >
+        <div>
             <nav>
                 <ul>
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About Us</a></li>
-                    <li><a href="events.html" >Events</a></li>
-                    <li><a href="past-events.html" >Past Events</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="past-events.html">Past Events</a></li>
                     <li><a href="contact.html">Contact</a></li>
-                    <!-- <li><a href="sponsors.html">Sponsors</a></li> -->
                     <li id="login-nav"><a href="login.html">Login</a></li>
                     <li id="signup-nav"><a href="signup.html">Sign Up</a></li>
                     <li id="profile-nav" style="display:none;"><a href="profile.html">Profile</a></li>
-                </ul> 
-                 <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+                </ul>
+                <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
             </nav>
         </div>
     </header>
 
-    
     <div class="signup-container">
         <h1>Sign Up</h1>
         <form id="signupForm">
@@ -107,25 +133,26 @@
     </div>
 
     <script type="module">
-        // Import Firebase products
-        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+        // Firebase configuration and imports
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, sendEmailVerification, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
 
         // Firebase configuration
         const firebaseConfig = {
-            apiKey: "AIzaSyDyUtZ_uPF65ZbFRuHst_nmao6y0xbqev4",
-            authDomain: "ankuran-2024.firebaseapp.com",
-            projectId: "ankuran-2024",
-            storageBucket: "ankuran-2024.appspot.com",
-            messagingSenderId: "25175569346",
-            appId: "1:25175569346:web:3ce91557b0438e18cddc5b"
-        };
+                apiKey: "AIzaSyDyUtZ_uPF65ZbFRuHst_nmao6y0xbqev4",
+                authDomain: "ankuran-2024.firebaseapp.com",
+                databaseURL: "YOUR_DATABASE_URL",
+                projectId: "ankuran-2024",
+                storageBucket: "ankuran-2024.appspot.com",
+                messagingSenderId: "25175569346",
+                appId: "1:25175569346:web:3ce91557b0438e18cddc5b"
+            };
 
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
 
-        // Handle form submission
+        // Form submission handler
         document.getElementById('signupForm').addEventListener('submit', function(event) {
             event.preventDefault();
             const email = document.getElementById('email').value;
@@ -139,15 +166,27 @@
 
             createUserWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
-                    // Successful sign-up, redirect to login page
-                    window.location.href = "login.html";
+                    // Send verification email after successful sign-up
+                    sendEmailVerification(userCredential.user)
+                        .then(() => {
+                            alert("A verification email has been sent to " + email + ". Please check your inbox.");
+                            window.location.href = "login.html";
+                        })
+                        .catch((error) => {
+                            console.error("Error sending verification email:", error);
+                        });
                 })
                 .catch((error) => {
                     console.error("Error during sign up:", error.message);
                     alert("Sign up failed: " + error.message);
                 });
         });
+
+        // Toggle navbar menu for mobile view
+        function toggleMenu() {
+            const navList = document.querySelector("nav ul");
+            navList.classList.toggle("show");
+        }
     </script>
-    <script src="script.js"></script>
 </body>
 </html>
