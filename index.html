@@ -25,78 +25,17 @@
        }
 
        .insta-ankuran{
-         margin-right: 3rem;
          display: flex;
          flex-direction: flex-end;
-         /* justify-content: space-evenly; */
          align-items: center;
 
        }
-
-       .Register{
-        position: absolute;
-       top: 90%;
-       left: 50%;
-       transform: translate(-50%, -50%);
-       /* background-color: rgba(9, 9, 9, 0.9); */
-       padding: 20px;
-       text-align: center;
-       display: flex;
-       /* justify-content:space-between; */
-       justify-content:space-evenly;
-       /* flex-direction: column; */
-       align-items: center;
-       border-radius: 50%;
-       color: #000;
-       gap: 4rem;
-      }
-
-      #register-btn{
-        border: none;
-        width: 12rem;
-        height: 4rem;
-        /* width: 100%;
-        height: 100%; */
-        font-size: 1.6rem;
-        background-color: none;
-        background-color: #2b002e;
-        color: white;
-        border-radius: 3%;
-        opacity: 0.9;
-        box-shadow: 5px 5px #4c394e;
-      }
-
-      #hackathon-btn{
-        border: none;
-        width: 12rem;
-        height: 4rem;
-        /* width: 100%;
-        height: 100%; */
-        font-size: 1.6rem;
-        background-color: none;
-        background-color: #2b002e;
-        color: white;
-        border-radius: 3%;
-        opacity: 0.8;
-        box-shadow: 5px 5px #4c394e;
-      }
-
-      #register-btn:hover {
-        color: #Bf0904;
-        cursor: pointer;
-      }
-
-      
-      #hackathon-btn:hover {
-        color: #Bf0904;
-        cursor: pointer;
-      }
 
        .brochure-btn{
         border: none;
         width: 12rem;
         height: 4rem;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         background-color: none;
         background-color: #2b002e;
         color: white;
@@ -110,26 +49,20 @@
         color: white;
        }
 
-       .brochure-btn a:hover{
-        color: #Bf0904;
-        cursor: pointer;
-       }
-
-
        @media(max-width: 768px){
 
-        .insta-ankuran{
+    .insta-ankuran{
          display: flex;
+         flex-direction: flex-end;
+         /* justify-content: space-evenly; */
          align-items: center;
        }
            
         .brochure-btn{
         border: none;
-        /* width: 10rem;
-        height: 4rem; */
-        width: 100%;
+        width: 10rem;
         height: 4rem;
-        /* font-size: 1.6rem; */
+        font-size: 1.6rem;
         background-color: none;
         background-color: #2b002e;
         color: white;
@@ -138,9 +71,9 @@
         box-shadow: 5px 5px #4c394e;
        }
 
-       .brochure-btn a:hover{
+       .brochure-btn:hover{
         cursor: pointer;
-        color: white;
+        color: #Bf0904;
        }
 
        .Register{
@@ -148,50 +81,38 @@
        top: 90%;
        left: 50%;
        transform: translate(-50%, -50%);
-       /* background-color: rgba(9, 9, 9, 0.9); */
        padding: 20px;
        text-align: center;
        display: flex;
-       justify-content: space-evenly;
-       /* flex-direction: column; */
+       justify-content:space-between;
        align-items: center;
        border-radius: 50%;
        color: #000;
-       gap: 15px;
+       gap: 0.4rem;
 
        }
 
        #register-btn{
         border: none;
-        /* width: 10rem;
-        height: 4rem; */
-        width: 100%;
+        width: 10rem;
         height: 4rem;
-        /* font-size: 1.6rem; */
+        font-size: 1.6rem;
         background-color: none;
         background-color: #2b002e;
         color: white;
         border-radius: 3%;
-        opacity: 0.9 ;
+        opacity: 0.9;
         box-shadow: 5px 5px #4c394e;
       }
+    }
 
-      #hackathon-btn{
-        border: none;
-        /* width: 10rem;
-        height: 4rem; */
-        width: 100%;
-        height: 4rem;
-        /* font-size: 1.6rem; */
-        background-color: none;
-        background-color: #2b002e;
-        color: white;
-        border-radius: 3%;
-        opacity: 0.8;
-        box-shadow: 5px 5px #4c394e;
-      }
+       .brochure-btn :hover{
+        color: #Bf0904;
+        cursor: pointer;
+       }
 
-      .video-bg {
+       @media(max-width :768px){
+        .video-bg {
           position: fixed;
           top: 0;
           left: 0;
@@ -202,7 +123,43 @@
           overflow: hidden;
          
        }
-    }
+      }
+
+
+      .Register{
+        position: absolute;
+       top: 90%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       /* background-color: rgba(9, 9, 9, 0.9); */
+       padding: 20px;
+       text-align: center;
+       display: flex;
+       justify-content:space-between;
+       /* flex-direction: column; */
+       align-items: center;
+       border-radius: 50%;
+       color: #000;
+       gap: 4rem;
+      }
+
+      #register-btn{
+        border: none;
+        width: 12rem;
+        height: 4rem;
+        font-size: 1.6rem;
+        background-color: none;
+        background-color: #2b002e;
+        color: white;
+        border-radius: 3%;
+        opacity: 0.9;
+        box-shadow: 5px 5px #4c394e;
+      }
+
+      #register-btn:hover {
+        color: #Bf0904;
+        cursor: pointer;
+      }
     </style>
 </head>
     
@@ -309,8 +266,7 @@
         <!-- Register Now Button -->
         <div class="Register">
             <button id="register-btn">Register</button>
-            <button id="hackathon-btn">Hackathon</button>
-            <button class="brochure-btn"> <a href="Brochure (2).pdf" target="_blank" >  Brochure</a> </button>
+            <button class="brochure-btn"> <a href="Brochure (2).pdf" target="_blank" >Brochure</a> </button>
         </div>
     <!-- </div> -->
 
@@ -528,11 +484,7 @@
        
     </script>
 
-      <script>
-        document.getElementById('hackathon-btn').addEventListener('click', function() {
-         window.location.href = 'https://docs.google.com/forms/d/14qGT44YTv9vEchanmMcZ9YmlrQH6wivu9chdaegP_oU/edit?usp=drivesdk'; // Replace with your actual Google Form link
-         });
-    </script>
+    <!-- Add your other content sections here... -->
 
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/536b7f8348.js" crossorigin="anonymous"></script>
