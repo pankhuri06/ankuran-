@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .img-box{
+            display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           gap: 2rem;
+           margin-top: 3rem;
+           margin-bottom: 3rem;
+        }
+
+        h1{
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 2.5rem;
+        }
+
+        .event-card {
+           background-color: #2e2e2e;
+           padding: 20px;
+           border-radius: 10px;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+           width: 300px;
+       }
+
+        .event-card img {
+             width: 100%;
+              height: auto;
+            border-radius: 10px;
+       }
+
+       #hackathon-btn{
+        border: none;
+        /* width: 12rem; */
+        height: 4rem;
+        width: 100%;
+        /* height: 4rem; */
+        /* font-size: 1.6rem; */
+        background-color: none;
+        background-color: #2b002e;
+        color: white;
+        border-radius: 3%;
+        margin-top: 2rem;
+        margin-top: 2rem;
+        font-size: 1.7rem;
+        opacity: 0.8;
+        box-shadow: 5px 5px #4c394e;
+      }
+
+      #hackathon-btn:hover {
+        color: #Bf0904;
+        cursor: pointer;
+      }
+
+      .Register{
+        position: absolute;
+       /* top: 100%; */
+       left: 50%;
+       transform: translate(-50%, -50%);
+       /* background-color: rgba(9, 9, 9, 0.9); */
+       padding: 20px;
+       text-align: center;
+       display: flex;
+       justify-content: space-evenly;
+       /* flex-direction: column; */
+       align-items: center;
+       border-radius: 50%;
+       margin-bottom: 3rem;
+       color: #000;
+       gap: 15px;
+
+       }
+
+       footer{
+        margin-top: 8rem;
+       }
+
+       @media(max-width: 768px){
+
+        #hackathon-btn{
+        border: none;
+        width: 14rem;
+        height: 4rem;
+        /* width: 100%; */
+        /* height: 4rem; */
+        /* font-size: 1.6rem; */
+        background-color: none;
+        background-color: #2b002e;
+        color: white;
+        border-radius: 3%;
+        margin-top: 2rem;
+        margin-top: 2rem;
+        font-size: 1.1rem;
+        opacity: 0.8;
+        box-shadow: 5px 5px #4c394e;
+      }
+
+       }
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Include your navbar here -->
+        <div >
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="events.html"  class="active">Events</a></li>
+                    <li><a href="past-events.html">Past Events</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+<!--                     <li><a href="sponsors.html">Sponsors</a></li> -->
+                     <li id="login-nav"><a href="login.html">Login</a></li>
+                    <li id="signup-nav"><a href="signup.html">Sign Up</a></li>
+                    <li id="profile-nav" style="display:none;"><a href="profile.html">Profile</a></li>
+                </ul> 
+                 <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            </nav>
+        </div> 
+    </header>
+
+    <h1>Hackathon</h1>
+
+    <div class="img-box">
+        <div class="event-card">
+            <img src="h1.png" alt="h1">
+        </div>
+        <div class="event-card">
+            <img src="h2.png" alt="h1">
+        </div>
+        <div class="event-card">
+            <img src="h3.png" alt="h1">
+        </div>
+        <div class="event-card">
+            <img src="h4.png" alt="h1">
+        </div>
+        <div class="event-card">
+            <img src="h5.png" alt="h1">
+        </div>
+    </div>
+
+    <div class="Register">
+        <button id="hackathon-btn">Register for Hackathon</button>
+    </div>
+
+    <footer>
+        <p>© 2024 Ankuran, IET Lucknow. All rights reserved.</p>
+        <p>Follow us on <a href="https://www.instagram.com/ankuran_2022" target="_blank">Instagram</a></p>
+    </footer>
+
+
+    <script>
+        document.getElementById('hackathon-btn').addEventListener('click', function() {
+         window.location.href = 'https://docs.google.com/forms/d/14qGT44YTv9vEchanmMcZ9YmlrQH6wivu9chdaegP_oU/edit?usp=drivesdk'; // Replace with your actual Google Form link
+         });
+    </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
