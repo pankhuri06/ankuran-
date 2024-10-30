@@ -49,6 +49,16 @@
         color: white;
        }
 
+       .hackathon a{
+        text-decoration: none;
+        color: white;
+       }
+
+       .hackathon a:hover{
+        cursor: pointer;
+        color: #Bf0904;
+       }
+
        @media(max-width: 768px){
 
     .insta-ankuran{
@@ -74,6 +84,10 @@
        .brochure-btn:hover{
         cursor: pointer;
         color: #Bf0904;
+       }
+
+       .hero{
+        margin-top: 44rem;
        }
 
        .Register{
@@ -143,6 +157,27 @@
        gap: 4rem;
       }
 
+      .hackathon{
+        position: absolute;
+       top: 100%;
+       left: 50%;
+       margin-top: 2rem;
+       margin-bottom: 4rem;
+       padding-bottom: 3rem;
+       transform: translate(-50%, -50%);
+       /* background-color: rgba(9, 9, 9, 0.9); */
+       padding: 20px;
+       text-align: center;
+       display: flex;
+       justify-content:center;
+       /* flex-direction: column; */
+       align-items: center;
+       border-radius: 50%;
+       color: #000;
+       gap: 4rem;
+      }
+
+
       #register-btn{
         border: none;
         width: 12rem;
@@ -160,6 +195,7 @@
         color: #Bf0904;
         cursor: pointer;
       }
+
     </style>
 </head>
     
@@ -268,11 +304,15 @@
             <button id="register-btn">Register</button>
             <button class="brochure-btn"> <a href="Brochure (2).pdf" target="_blank" >Brochure</a> </button>
         </div>
+
+        <div class="hackathon">
+            <button id="register-btn"><a href ="hackathon.html"> Hackathon</a></button>
+        </div>
     <!-- </div> -->
 
      <!-- Hero Section -->
      <section class="hero">
-        <img src="bg-image.png.png" alt="Ankuran 2024">
+        <img src="bg-image.png" alt="Ankuran 2024">
         <div class="hero-content">
            <!--  <h1>Ankuran 2024</h1> -->
             <!-- <p>The Tech-Cultural Event of IET Lucknow</p> -->
